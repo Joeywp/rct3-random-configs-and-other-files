@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rawovl basedir="output\" installdir="" xmlns="http://rct3.sourceforge.net/rct3xml/raw">
+	<!-- THIS PART IS NOT REQUIRED! Before using this, you should know how references work -->
+	<rawovl basedir="gui\FrontScreen\ScenarioLogos\Wild">
+		<rawovl file="FrontScreen">
+			<reference>FrontScreen2</reference>
+			<reference>SkinTexts</reference>
+		</rawovl>
+		<rawovl file="SkinTexts">
+			<tex name="SpecialSTSDSIdentbar" txs="GUIIcon" format="19">
+			  <texture><data type="file">GUI.png</data></texture>
+			</tex>
+			<gsi name="SpecialSTSDSIdentbar_OpenMixmaster" tex="SpecialSTSDSIdentbar" left="0" top="0" right="40" bottom="40"/>
+			<gsi name="SpecialSTSDSIdentbar" tex="SpecialSTSDSIdentbar" left="40" top="0" right="58" bottom="12"/>
+			<gsi name="SpecialSTSDSIdentbar_SpecialEffectBar" tex="SpecialSTSDSIdentbar" left="0" top="40" right="32" bottom="56"/>
+			
+			<txt name="SuspendedTopspin-DifferentShowsAnimIdle" type="text">Stilstaande animatie</txt>
+			<txt name="SuspendedTopspin-DifferentShowsAnimLong" type="text">Lang ritprogramma</txt>
+			<txt name="SuspendedTopspin-DifferentShowsAnimShort" type="text">Kort ritprogramma</txt>
+			<txt name="SuspendedTopspin-DifferentShowsAnimStart" type="text">Startende animatie</txt>
+			<txt name="SuspendedTopspin-DifferentShowsAnimStop" type="text">Stoppende animatie</txt>
+			
+			<txt name="SuspendedTopspin-DifferentShowsAnimIdleSkin" type="text">SpecialSTSDSIdentbar</txt>
+			<txt name="SuspendedTopspin-DifferentShowsAnimLongSkin" type="text">SpecialSTSDSIdentbar</txt>
+			<txt name="SuspendedTopspin-DifferentShowsAnimShortSkin" type="text">SpecialSTSDSIdentbar</txt>
+			<txt name="SuspendedTopspin-DifferentShowsAnimStartSkin" type="text">SpecialSTSDSIdentbar</txt>
+			<txt name="SuspendedTopspin-DifferentShowsAnimStopSkin" type="text">SpecialSTSDSIdentbar</txt>
+			
+			<txt name='Thought_SuspendedTopspin-DifferentShowsGood1' type='text'>Wat een schitterend gezicht!</txt>
+			<txt name='Thought_SuspendedTopspin-DifferentShowsGood2' type='text'>Het leven is dol fijn...</txt>		
+			<txt name='Thought_SuspendedTopspin-DifferentShowsGood3' type='text'>Wat een schitterende beesten!</txt>		
+			<txt name='Thought_SuspendedTopspin-DifferentShowsBad1' type='text'>En als die truc nou eens fout gaat?</txt>		
+			<txt name='Thought_SuspendedTopspin-DifferentShowsBad2' type='text'>Dat is wreed...</txt>		
+			<txt name='Thought_SuspendedTopspin-DifferentShowsBad3' type='text'>Hoeveel vis eten ze?</txt>
+		</rawovl>
+	</rawovl>
+	<!-- END OF THE PART THAT IS NOT REQUIRED! -->
+    <rawovl basedir="Style\Custom\Mennoo\SuspendedTopspin-DifferentShows" prefix="Mennoo-">
+      <rawovl file="SuspendedTopspin-DifferentShows">
+      	<import file="STS-shows2.xml" name="SuspendedTopspin-DifferentShows" id="mainimport"/>
+      </rawovl>
+      <rawovl version="4" file="Style">
+        <tex name="Rec-with" format="20">
+          <texture><data type="file">Rec-with.bmp</data></texture>
+        </tex>
+        <gsi name="SuspendedTopspin-DifferentShows" tex="Rec-with" left="0" top="389" right="389" bottom="0"/>
+        <txt name="SuspendedTopspin-DifferentShows" type="text">SuspendedTopspin-DifferentShows</txt>
+		
+        <txt name="SuspendedTopspin-DifferentShowsdesc" type="text">A Huss Suspended TopSpin in with recolorable textures with different rideprograms</txt>
+        <anr name="SuspendedTopspin-DifferentShows" nametxt="SuspendedTopspin-DifferentShows" description="SuspendedTopspin-DifferentShowsdesc" sid="SuspendedTopspin-DifferentShows">
+          <attraction type="769" loopSpline="loopspline" impref="mainimport">
+            <attractionPath spline="seatspline1" impref="mainimport"/>
+            <attractionPath spline="seatspline2" impref="mainimport"/>
+            <attractionPath spline="seatspline3" impref="mainimport"/>
+            <attractionPath spline="seatspline4" impref="mainimport"/>
+            <attractionPath spline="seatspline5" impref="mainimport"/>
+            <attractionPath spline="seatspline6" impref="mainimport"/>
+            <attractionPath spline="seatspline7" impref="mainimport"/>
+            <attractionPath spline="seatspline8" impref="mainimport"/>
+            <attractionPath spline="mechanicspline" impref="mainimport"/>
+            <attractionMisc baseUpkeep="4960" flags="1" maxHeight="16"/>
+			<attractionExtension addonAssociation="2" />		  
+          </attraction>
+		  <!-- The important part: the "show" animations -->
+		  <showItem animationIndex="0">SuspendedTopspin-DifferentShowsAnimIdle</showItem>
+		  <showItem animationIndex="1">SuspendedTopspin-DifferentShowsAnimLong</showItem>
+		  <showItem animationIndex="2">SuspendedTopspin-DifferentShowsAnimShort</showItem>
+		  <showItem animationIndex="3">SuspendedTopspin-DifferentShowsAnimStart</showItem>
+		  <showItem animationIndex="4">SuspendedTopspin-DifferentShowsAnimStop</showItem>
+          <ride attractivity="200" entryFee="10" seating="13" maxCircuits="1">
+            <rideOption type="12">
+              <parameter>60</parameter>
+              <parameter>20</parameter>
+              <parameter>10</parameter>
+            </rideOption>
+            <rideOption type="10">
+              <parameter>10</parameter>
+            </rideOption>
+            
+            <rideOption type="0"/>
+            <rideOption type="8">
+              <parameter>5</parameter>
+              <parameter>5</parameter>
+              <parameter>5</parameter>
+              <parameter>1</parameter>
+            </rideOption>
+            <rideOption type="0"/>
+            <rideOption type="11">
+              <parameter>0</parameter>
+            </rideOption>
+          </ride>
+        </anr>
+        
+        <sid name="SuspendedTopspin-DifferentShows" nametxt="SuspendedTopspin-DifferentShows" icon="SuspendedTopspin-DifferentShows"
+          ovlpath="Style\Custom\Mennoo\SuspendedTopspin-DifferentShows\SuspendedTopspin-DifferentShows" svd="SuspendedTopspin-DifferentShows">
+          <type scenerytype="23" />
+          <position xsize="3" ysize="4" zsize="0" xsquares="3" zsquares="4"/>
+          <colours choice1="7" choice2="18" choice3="28"/>
+          <squareUnknowns flags="1" minHeight="0" maxHeight="5" supports="0"/>
+        </sid>
+        <symbol name="StyleIndex" target="common" type="int" data="0"/>
+      </rawovl>
+    </rawovl>
+</rawovl>

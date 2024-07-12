@@ -1,0 +1,24 @@
+<!-- If you really want to merge custom tracks on a good way, just wait until CTR Creator 1.0 by Markus Lomberg! -->
+<?xml version='1.0' encoding='UTF-8'?>
+<rawovl basedir='output\' installdir='' xmlns='http://rct3.sourceforge.net/rct3xml/raw'>
+	<rawovl basedir='tracks\TrackedRides\CTR_AntML04Invisible\' prefix=''>
+		<rawovl file='CTR_AntML04Invisible'>
+			<txt name="Desc" type="text">An Elevator extension to Markus' N profile track (requires the EP-addon to be installed!). Car by Coasterfreak90, Track and Ride by Markus, Elevator extension by Joeywp.</txt>
+			<txt name="Name" type="text">EP Matterhorn-Blitz (With Elevator extension)</txt>
+						
+			<trr name="CTR_AntML04Invisible" nametxt="Name" description="Desc">
+				<!-- Each trackpath is a reference to a track -->		
+				<trackPath>../../TrackedRides/TrackCTR_ML04FamilyRCProfileN/TrackCTR_ML04FamilyRCProfileN</trackPath>	
+				<trackPath>../../TrackedRides/TrackCTR_RR03InvisibleTrack/TrackCTR_RR03InvisibleTrack</trackPath>							
+				<attraction version="2" icon="StyleIcon"></attraction>
+				<!-- The carname -->
+				<train>CTR_JurassicParkRiverAdventure</train>
+				<station modusFlags='7'></station>				
+				<!-- Add tracksections here -->
+				<trackSection>RR03.BlockBrakes.S0.T0.D0</trackSection>								
+			</trr>
+			
+			<reference>../CTR_EPMatterhornBlitzRide/CTR_EPMatterhornBlitzRide</reference>
+		</rawovl>
+	</rawovl>
+</rawovl>
